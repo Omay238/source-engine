@@ -100,6 +100,11 @@ jobs:
     - name: Build macos-amd64
       run: |
         scripts/build-macos-amd64.sh
+    - name: Upload a Build Artifact
+      uses: actions/upload-artifact@v4.4.3
+      with:
+        name: macos-amd64
+        path: .
 
   build-dedicated-macos-amd64:
     runs-on: macos-latest
